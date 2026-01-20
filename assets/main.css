@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #__nuxt {
+  height: 100%;
+}
+
+/* Subtle blueberry-ish backdrop */
+.bg-booth {
+  background:
+    radial-gradient(1200px 800px at 10% 10%, rgba(59,130,246,0.18), transparent 60%),
+    radial-gradient(1000px 700px at 90% 0%, rgba(30,64,175,0.14), transparent 55%),
+    radial-gradient(900px 700px at 50% 100%, rgba(37,99,235,0.10), transparent 55%),
+    #0b1220;
+}
+
+/* Large tap targets */
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-base font-semibold shadow-sm transition active:scale-[0.99] focus:outline-none focus-visible:ring-2 focus-visible:ring-blueberry-400/70 focus-visible:ring-offset-2;
+}
+.btn-primary {
+  @apply bg-blueberry-600 text-white hover:bg-blueberry-700;
+}
+.btn-secondary {
+  @apply bg-white/10 text-white hover:bg-white/15 border border-white/10;
+}
+.btn-danger {
+  @apply bg-rose-600 text-white hover:bg-rose-700;
+}
+.card {
+  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur shadow-sm;
+}
+.kbd {
+  @apply rounded-lg border border-white/10 bg-white/10 px-2 py-1 text-xs;
+}
